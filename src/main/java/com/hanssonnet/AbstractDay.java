@@ -7,9 +7,21 @@ import java.nio.file.Paths;
 public class AbstractDay implements Day {
 
     private final String input;
+    private final String name;
 
     public AbstractDay(String day) {
+        this.name = formatPrettyName(day);
         this.input = loadInput(day);
+    }
+
+    private String formatPrettyName(String day) {
+        return day.substring(0, 1).toUpperCase() + day.substring(1);
+    }
+
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
