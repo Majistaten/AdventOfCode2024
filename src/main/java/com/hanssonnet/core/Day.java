@@ -1,4 +1,4 @@
-package com.hanssonnet;
+package com.hanssonnet.core;
 
 public interface Day {
     String getName();

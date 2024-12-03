@@ -1,7 +1,7 @@
-package com.hanssonnet.day01;
+package com.hanssonnet.days;
 
-import com.hanssonnet.AbstractDay;
-import com.hanssonnet.Util;
+import com.hanssonnet.core.AbstractDay;
+import com.hanssonnet.util.Util;
 
 import java.util.*;
 import java.util.stream.Collectors;

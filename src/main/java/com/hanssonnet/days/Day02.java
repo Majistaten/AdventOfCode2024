@@ -1,7 +1,7 @@
-package com.hanssonnet.day02;
+package com.hanssonnet.days;
 
-import com.hanssonnet.AbstractDay;
-import com.hanssonnet.Util;
+import com.hanssonnet.core.AbstractDay;
+import com.hanssonnet.util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class Day02 extends AbstractDay {
                 .filter(report -> !report.isEmpty())
                 .filter(Util::isMonotonic)
                 .filter(monotonicReports -> Util.hasValidStepChanges(monotonicReports, 1, 3)).count();
-        return String.format("Result: " + result);
+        return String.format("Result: %d", result);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Day02 extends AbstractDay {
                 .filter(report -> !Util.isMonotonic(report) || !Util.hasValidStepChanges(report, 1, 3)).toList();
         var dampenedReports = faultyReports.stream().filter(faultyReport -> !problemDampener(faultyReport)).count();
         int result = reports.size() - (int) dampenedReports;
-        return String.format("Result: " + result);
+        return String.format("Result: %d", result);
     }
 
     private static boolean isValidReport(List<Integer> report) {

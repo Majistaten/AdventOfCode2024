@@ -1,4 +1,4 @@
-package com.hanssonnet;
+package com.hanssonnet.core;
 
 import java.io.IOException;
 import java.nio.file.Files;

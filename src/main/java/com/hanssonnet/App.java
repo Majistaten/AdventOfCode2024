@@ -1,7 +1,9 @@
 package com.hanssonnet;
 
-import com.hanssonnet.day01.Day01;
-import com.hanssonnet.day02.Day02;
+import com.hanssonnet.core.Day;
+import com.hanssonnet.days.Day01;
+import com.hanssonnet.days.Day02;
+import com.hanssonnet.days.Day03;
 
 public class App 
 {
@@ -9,6 +11,12 @@ public class App
     {
         day01();
         day02();
+        day03();
+    }
+
+    private static void day03() {
+        Day day = new Day03();
+        printDay(day);
     }
 
     private static void day02() {
@@ -23,7 +31,7 @@ public class App
     }
 
     private static void printDay(Day day) {
-        System.out.println("-*".repeat(5) + day.getName() + "*-".repeat(5));
+        System.out.println("~* ".repeat(5) + day.getName() + " *~".repeat(5));
         System.out.println("-".repeat(5) + " Part 1 " + "-".repeat(5));
         System.out.println(day.part1(day.getInput()));
         System.out.println("-".repeat(5) + " Part 2 " + "-".repeat(5));
