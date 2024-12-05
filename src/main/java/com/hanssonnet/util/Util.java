@@ -2,11 +2,15 @@ package com.hanssonnet.util;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Util {
     public static List<String> splitLines(String input) {
         return Arrays.asList(input.split("\n"));
+    }
+    public static char[][] get2DCharArray(String input) {
+        return Arrays.stream(input.split("\n")).map(String::toCharArray).toArray(char[][]::new);
     }
 
     public static int calculateDifference(int x, int y) {

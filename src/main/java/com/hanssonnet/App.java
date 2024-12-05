@@ -4,6 +4,7 @@ import com.hanssonnet.core.Day;
 import com.hanssonnet.days.Day01;
 import com.hanssonnet.days.Day02;
 import com.hanssonnet.days.Day03;
+import com.hanssonnet.days.Day04;
 
 public class App 
 {
@@ -12,6 +13,12 @@ public class App
         day01();
         day02();
         day03();
+        day04();
+    }
+
+    private static void day04() {
+        Day day = new Day04();
+        printDay(day);
     }
 
     private static void day03() {
