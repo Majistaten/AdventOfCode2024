@@ -1,4 +1,4 @@
-package com.hanssonnet.util;
+package com.hanssonnet.shared;
 
 public enum Direction {
     NORTH,

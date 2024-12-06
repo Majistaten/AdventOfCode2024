@@ -1,4 +1,4 @@
-package com.hanssonnet.util;
+package com.hanssonnet.shared;
 
 import java.util.ArrayList;
 import java.util.HashMap;

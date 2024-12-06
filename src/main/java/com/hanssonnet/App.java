@@ -1,10 +1,7 @@
 package com.hanssonnet;
 
 import com.hanssonnet.core.Day;
-import com.hanssonnet.days.Day01;
-import com.hanssonnet.days.Day02;
-import com.hanssonnet.days.Day03;
-import com.hanssonnet.days.Day04;
+import com.hanssonnet.days.*;
 
 public class App 
 {
@@ -14,6 +11,12 @@ public class App
         day02();
         day03();
         day04();
+        day05();
+    }
+
+    private static void day05() {
+        Day day = new Day05();
+        printDay(day);
     }
 
     private static void day04() {
