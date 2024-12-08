@@ -12,7 +12,19 @@ public class App
         day03();
         day04();
         day05();
-        day06();
+//        day06(); // Slow...
+        day07();
+        day08();
+    }
+
+    private static void day08() {
+        Day day = new Day08();
+        printDay(day);
+    }
+
+    private static void day07() {
+        Day day = new Day07();
+        printDay(day);
     }
 
     private static void day06() {

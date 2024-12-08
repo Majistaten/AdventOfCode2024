@@ -22,6 +22,12 @@ public class Point<T> {
         this.previous = previous;
     }
 
+    public Point(int x, int y, T content) {
+        this.x = x;
+        this.y = y;
+        this.content = content;
+    }
+
     public Point(int x, int y, T content, Point<T> previous) {
         this.x = x;
         this.y = y;
@@ -49,6 +55,10 @@ public class Point<T> {
             current = current.navigate(direction);
         }
         return current;
+    }
+
+    public Point<T> moveTo(Point<T> other) {
+        return new Point<>(other.x, other.y, this.content, this.previous);
     }
 
     public List<Point<T>> getNeighbors() {

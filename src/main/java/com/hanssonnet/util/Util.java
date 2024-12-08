@@ -1,5 +1,8 @@
 package com.hanssonnet.util;
 
+import com.hanssonnet.shared.Pair;
+import com.hanssonnet.shared.Point;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiFunction;
@@ -41,5 +44,9 @@ public class Util {
         var yLength = map.size();
         var xLength = map.getFirst().length();
         return (xCoord, yCoord) -> yCoord >= 0 && yCoord < yLength && xCoord >= 0 && xCoord < xLength;
+    }
+
+    public static Pair<Integer> calculateOffset(Point<?> point1, Point<?> point2) {
+        return new Pair<>(point2.x - point1.x, point2.y - point1.y);
     }
 }
