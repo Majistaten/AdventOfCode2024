@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class Point<T> {
-    public int x;
-    public int y;
+    public Integer x;
+    public Integer y;
     public T content;
     public Point<T> previous;
 
@@ -92,5 +92,40 @@ public class Point<T> {
             return Direction.NORTHWEST;
         }
         return null;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Point<?> point = (Point<?>) o;
+        return x.equals(point.x) && y.equals(point.y);
+    }
+
+    @Override
+    public int hashCode() {
+        return 31 * x.hashCode() + y.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Point{x=%s, y=%s}", x, y);
+    }
+
+    @Override
+    public Point<T> clone() {
+        T clonedContent = null;
+        if (content instanceof Cloneable) {
+            try {
+                var method = content.getClass().getMethod("clone");
+                clonedContent = (T) method.invoke(content);
+            } catch (Exception e) {
+                clonedContent = content;
+            }
+        } else {
+            clonedContent = content;
+        }
+        Point<T> clonedPrevious = previous != null ? previous.clone() : null;
+        return new Point<>(x, y, clonedContent, clonedPrevious);
     }
 }

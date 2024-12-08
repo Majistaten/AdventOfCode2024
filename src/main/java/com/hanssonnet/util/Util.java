@@ -2,7 +2,7 @@ package com.hanssonnet.util;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.function.BiFunction;
 import java.util.stream.IntStream;
 
 public class Util {
@@ -35,5 +35,11 @@ public class Util {
             int change = Util.calculateDifference(numbers.get(index), numbers.get(index + 1));
             return change >= minChange && change <= maxChange;
         });
+    }
+
+    public static BiFunction<Integer, Integer, Boolean> isWithinBounds(List<String> map) {
+        var yLength = map.size();
+        var xLength = map.getFirst().length();
+        return (xCoord, yCoord) -> yCoord >= 0 && yCoord < yLength && xCoord >= 0 && xCoord < xLength;
     }
 }

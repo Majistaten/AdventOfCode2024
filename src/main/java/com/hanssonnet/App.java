@@ -12,6 +12,12 @@ public class App
         day03();
         day04();
         day05();
+        day06();
+    }
+
+    private static void day06() {
+        Day day = new Day06();
+        printDay(day);
     }
 
     private static void day05() {
