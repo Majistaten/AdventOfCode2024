@@ -15,6 +15,18 @@ public class App
 //        day06(); // Slow...
         day07();
         day08();
+//        day09(); // Slow...
+        day10();
+    }
+
+    private static void day10() {
+        Day day = new Day10();
+        printDay(day);
+    }
+
+    private static void day09() {
+        Day day = new Day09();
+        printDay(day);
     }
 
     private static void day08() {

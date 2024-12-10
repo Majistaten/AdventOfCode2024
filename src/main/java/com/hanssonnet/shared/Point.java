@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Point<T> {
+public class Point<T> implements Cloneable {
     public Integer x;
     public Integer y;
     public T content;
